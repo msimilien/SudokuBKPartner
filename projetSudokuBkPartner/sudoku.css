@@ -1,0 +1,193 @@
+html {
+    background: #e6e9e9;
+    background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color: #545454;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2em 2em 4em;
+}
+
+table#sudoku td	{width: 2.5em; height:2.5em;
+border-width: 1px;
+border-style: solid;
+border-color: black;
+font-weight: bold;
+text-align: center
+}
+
+table#sudoku {
+border-width: 3px;
+border-style: solid;
+border-color: black
+}
+
+table#sudoku td[id^=cell_2] {border-right-width: 2px}
+table#sudoku td[id^=cell_5] {border-right-width: 2px}
+table#sudoku td[id$=_2] {border-bottom-width: 2px}
+table#sudoku td[id$=_5] {border-bottom-width: 2px}
+td.selected	{background-color: darkgray}
+td.tofill	{color: blue}
+td.validate { background-color:burlywood}
+
+#mesageInit{
+    font: 16px arial, sans-serif;
+    color: #FF4500;
+}
+
+#header {
+     border-top:7px solid #505559;
+     margin:0 auto;
+     width:770px;
+     background: #eee;
+     height: 55px;
+     padding: 20px 0;
+     font: 12px arial, sans-serif;
+ }
+ 
+ /*#header h1 {
+     margin-left: 30px; 
+     float: left;
+     width: 197px;
+     height: 45px;
+     background: url(http://dummyimage.com/197x45/fe63a5/000&text=LOGOPIC) no-repeat 0 0;
+     text-indent: -9999px;
+ }*/
+#userProfil {
+    float: right;
+    /*margin-right: 1px;*/
+    margin-top: -50px;
+}
+
+#scoreHeader{
+    float: right;
+    margin-top: -30px;
+ }
+     
+ 
+ #header form {
+     float: right; 
+     margin-right: 1px; 
+     height: 150px; 
+     padding-top: 0px;
+     margin-top:-20px;
+ }
+ 
+ #header form label {
+     display: inline-block; 
+     margin: 0 2px;
+ }
+ 
+ #header_container form input {}
+ 
+ #header form #s-user, 
+ #header form #s-pass {
+     display: block;
+     width: 100px;
+     border: 1px solid #eee;
+     padding: 3px 0 3px 0;
+     margin-bottom: -1px;
+ }
+ 
+ #header form .submit {
+     height: 23px;
+     vertical-align: bottom;
+     background: #d743ae; 
+     color: #fff;
+     border: 1px solid #ddd;
+     -moz-border-radius: 5px;    
+     border-radius: 5px;
+     }
+
+
+ /*region popup*/
+ .hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/*
+
+input{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 0px;
+    margin: -3px;
+    
+}
+input:focus { 
+    background-color: gray;
+}
+.tablaPrincipal{
+    
+    width:500px;
+    height:300px;
+    border-style: solid;
+}
+.tabalasegundaria{
+    width: 70px;
+    padding: -1px;
+    margin: -1px;
+    border-style: solid;
+} */
