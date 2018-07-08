@@ -9,6 +9,8 @@ namespace projetSudokuBkPartner
     {
          private string _user;
          private string _pass;
+         private int _score;
+         private int _id;
 
          public String userSudoku
          {
@@ -19,6 +21,16 @@ namespace projetSudokuBkPartner
          {
              get { return _pass; }
              set { _pass = value; }
+         }
+         public int score
+         {
+             get { return _score; }
+             set { _score = value; }
+         }
+         public int id
+         {
+             get { return _id; }
+             set { _id = value; }
          }
          public UserLogin() { } 
     }

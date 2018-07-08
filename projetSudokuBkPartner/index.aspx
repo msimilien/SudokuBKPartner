@@ -1,5 +1,8 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<%@ Page Language="C#" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="projetSudokuBkPartner.index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,19 +15,18 @@
       
     </script>-->
 </head>
-
 <body onload="initialize();">
-
+  <form id="form1" runat="server" method="post">
     <div id="header">
         <h2>Sudoku</h2>
         <h4 id="userProfil">Bienvenue </h4>
         <h4 id="scoreHeader">Score:0</h4>
-        <form id="search">
+        <div id="search">
             
             <label>User <input type="text" name="s-user" id="s-user"></label>
             <label>Password<input type="password" name="s-pass" id="s-pass"></label>
-            <input type="button" class="submit" value="Entrer" onclick="login()">
-        </form>
+            <asp:Button runat="server" class="submit" Text="Entrer" OnClientClick="login()" />
+        </div>
        
     </div>
     
@@ -148,5 +150,6 @@
             <input type="button" onclick="hidePopup()" class="submit" value="Anuler">
         </div>
     </div>
+</form>
 </body>
 </html>

@@ -74,7 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataSudoku.aspx" />
-    <Content Include="HomePage.html" />
+    <Content Include="index.aspx" />
     <Content Include="sudoku.css" />
     <Content Include="sudoku.js" />
     <Content Include="Web.config" />
@@ -86,6 +86,13 @@
     </Compile>
     <Compile Include="DataSudoku.aspx.designer.cs">
       <DependentUpon>DataSudoku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginSudokuController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

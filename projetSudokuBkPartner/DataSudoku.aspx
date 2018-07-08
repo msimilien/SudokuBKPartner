@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataSudoku.aspx.cs" Inherits="projetSudokuBkPartner.DataSudoku" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="DataSudoku.aspx.cs" Inherits="projetSudokuBkPartner.DataSudoku" %>
 
 <!DOCTYPE html>
 

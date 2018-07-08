@@ -13,6 +13,7 @@ var subTabla9 = [];
 var arrayTotal = [];
 var tablafinal = [];
 var scoreT = 0;
+var id
 
 function initialize() {
     var col, row;
@@ -365,7 +366,7 @@ function login() {
             $.ajax({
                 type: "POST",
                 url: "DataSudoku.aspx/getUser",
-                data: { user: usertext, pass: passtext },
+                data:JSON.stringify({ user: usertext, pass: passtext }),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: OnSuccess,
@@ -373,7 +374,7 @@ function login() {
                     alert('fail');
                 },
                 error: function (response) {
-                    alert('error'+ response);
+                    //alert('error'+ response);
                 }
             });
         });
@@ -383,7 +384,17 @@ function login() {
 function OnSuccess(response) {
 
     resp = JSON.parse(response.d);
-
+    
+    if (resp == null) {
+        alert('Entrez un compte valide')
+    }
+    else {
+        var UserN = resp.userSudoku
+        id = resp.id
+        var point = resp.score
+        document.getElementById("userProfil").innerHTML = "Bienvenu " + UserN
+        document.getElementById("scoreHeader").innerHTML="Score "+point
+    }
     //for (indice in resp) {
     //    var idImg = "im" + resp[indice]._id;
     //    var imag = "Images/" + resp[indice]._imagen + ".jpg";

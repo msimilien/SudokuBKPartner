@@ -73,7 +73,7 @@ td.validate { background-color:burlywood}
  }
      
  
- #header form {
+ #search{
      float: right; 
      margin-right: 1px; 
      height: 150px; 
@@ -81,15 +81,15 @@ td.validate { background-color:burlywood}
      margin-top:-20px;
  }
  
- #header form label {
+ #search label {
      display: inline-block; 
      margin: 0 2px;
  }
  
  #header_container form input {}
  
- #header form #s-user, 
- #header form #s-pass {
+ #search #s-user, 
+ #search #s-pass {
      display: block;
      width: 100px;
      border: 1px solid #eee;
@@ -97,7 +97,7 @@ td.validate { background-color:burlywood}
      margin-bottom: -1px;
  }
  
- #header form .submit {
+ #search .submit {
      height: 23px;
      vertical-align: bottom;
      background: #d743ae; 

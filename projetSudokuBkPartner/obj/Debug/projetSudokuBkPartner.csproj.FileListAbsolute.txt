@@ -9,6 +9,6 @@ c:\users\user\documents\visual studio 2013\Projects\projetSudokuBkPartner\projet
 c:\users\user\documents\visual studio 2013\Projects\projetSudokuBkPartner\projetSudokuBkPartner\bin\System.Net.Http.Formatting.xml
 c:\users\user\documents\visual studio 2013\Projects\projetSudokuBkPartner\projetSudokuBkPartner\bin\System.Web.Http.xml
 c:\users\user\documents\visual studio 2013\Projects\projetSudokuBkPartner\projetSudokuBkPartner\bin\System.Web.Http.WebHost.xml
-c:\users\user\documents\visual studio 2013\Projects\projetSudokuBkPartner\projetSudokuBkPartner\obj\Debug\projetSudokuBkPartner.csprojResolveAssemblyReference.cache
 c:\users\user\documents\visual studio 2013\Projects\projetSudokuBkPartner\projetSudokuBkPartner\obj\Debug\projetSudokuBkPartner.dll
 c:\users\user\documents\visual studio 2013\Projects\projetSudokuBkPartner\projetSudokuBkPartner\obj\Debug\projetSudokuBkPartner.pdb
+c:\users\user\documents\visual studio 2013\Projects\projetSudokuBkPartner\projetSudokuBkPartner\obj\Debug\projetSudokuBkPartner.csprojResolveAssemblyReference.cache

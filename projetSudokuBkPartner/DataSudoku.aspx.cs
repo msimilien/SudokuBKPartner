@@ -20,8 +20,8 @@ namespace projetSudokuBkPartner
         }
 
         [WebMethod]
-        //[ScriptMethod(UseHttpGet = true)]
-        public static string getUser(string user, string pass)
+        [ScriptMethod(UseHttpGet = false)]
+        public static string getUser(string user, string pass) //
         {
             SqlDataAdapter objdataAdapter = new SqlDataAdapter();
             DataSet ds = new DataSet();
@@ -29,7 +29,7 @@ namespace projetSudokuBkPartner
             SqlCommand myCommand = new SqlCommand();
             myCommand.CommandType = CommandType.StoredProcedure;
             myCommand.Connection = cn;
-            myCommand.CommandText = "sp_traerProductosWeb";
+            myCommand.CommandText = "loginSudoku";
             objdataAdapter.SelectCommand = myCommand;
 
             SqlParameter userparam = new SqlParameter("@user", SqlDbType.NVarChar);
@@ -59,7 +59,17 @@ namespace projetSudokuBkPartner
                     
                     myUser.userSudoku = valor["user1"].ToString();
                     myUser.passSudoku = valor["Passwd"].ToString();
+                    myUser.id = (int)valor["id"];
+                    if (string.IsNullOrEmpty(valor["points"].ToString()))
+                    {
+                        myUser.score = 0;
+                    }
+                    else
+                    {
+                        myUser.score = (int)valor["points"];
+                    }
                    
+                 
                 }
                 jsondata = new JavaScriptSerializer().Serialize(myUser);
             }
