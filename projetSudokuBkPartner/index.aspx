@@ -32,7 +32,7 @@
     
     
     <br/>
-    <h3 id="mesageInit">Utilisez les curseurs et les touches numériques pour créer un sudoku.<p>Le jeu durera 5 minutes</p> </h3>
+    <h3 id="mesageInit">Utilisez les curseurs et les touches numériques pour créer un sudoku.<p>Le jeu durera 3 minutes</p> </h3>
     <form name="chronoForm">
         <input type="button" name="startstop" value="Jouer!" onclick="chronoStart()" />
         <input type="button" name="reset" value="Reset!" onclick="chronoReset()" />

@@ -21,7 +21,7 @@ namespace projetSudokuBkPartner
 
         [WebMethod]
         [ScriptMethod(UseHttpGet = false)]
-        public static string getUser(string user, string pass) //
+        public static string getUser(string user, string pass) 
         {
             SqlDataAdapter objdataAdapter = new SqlDataAdapter();
             DataSet ds = new DataSet();
@@ -76,6 +76,43 @@ namespace projetSudokuBkPartner
 
 
             return jsondata;
+        }
+
+         [WebMethod]
+        public static void saveScore(int id, int score)
+        {
+
+            SqlConnection cn = new SqlConnection(Properties.Settings.Default.myConexion);
+            SqlCommand myCommand = new SqlCommand();
+            myCommand.CommandType = CommandType.StoredProcedure;
+            myCommand.Connection = cn;
+            myCommand.CommandText = "AddScoreSudoku";
+           
+
+            SqlParameter idsc = new SqlParameter("@id", SqlDbType.Int);
+            idsc.Value = id;
+            myCommand.Parameters.Add(idsc);
+
+            SqlParameter scoreT = new SqlParameter("@score", SqlDbType.Int);
+            scoreT.Value = score;
+            myCommand.Parameters.Add(scoreT);
+
+            try
+            {
+                cn.Open();
+                int resultado = myCommand.ExecuteNonQuery();
+                
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                throw ex;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
         }
     }
 }

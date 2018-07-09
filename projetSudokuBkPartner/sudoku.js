@@ -301,7 +301,7 @@ function chrono() {
     }
     document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec + ":" + msec
     timerID = setTimeout("chrono()", 10)
-    if (min >= 1) {
+    if (min >= 3) {
         chronoStop()
         showPopup()
         chronoReset()
@@ -395,20 +395,7 @@ function OnSuccess(response) {
         document.getElementById("userProfil").innerHTML = "Bienvenu " + UserN
         document.getElementById("scoreHeader").innerHTML="Score "+point
     }
-    //for (indice in resp) {
-    //    var idImg = "im" + resp[indice]._id;
-    //    var imag = "Images/" + resp[indice]._imagen + ".jpg";
-    //    if (resp[indice]._tipo == 1) {
-    //        $("#combo").append('<li><img onclick="actualizar(this);" id= ' + idImg + ' class="ImageMenu" src= ' + imag + '></img></li>');
-
-
-    //    }
-    //    else {
-    //        $("#bebidas").append('<li><img onclick="actualizar(this);"  id= ' + idImg + ' class="ImageMenu" src= ' + imag + ' ></img></li>');
-
-    //    }
-
-    //}
+ 
 
 }
 
